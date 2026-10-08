@@ -28,7 +28,6 @@ int main() {
 
 
 	delete_two_dim_array(arr, row, column);
-	delete[] arr;
 	std::cout << "\n\n\n";
 	return 0;
 }
@@ -65,6 +64,7 @@ void delete_two_dim_array(int** arr, const int row, const int column) {
 	for (int i = 0; i < row; ++i) {
 		delete[] arr[i];
 	}
+	delete[] arr;
 }
 
 
